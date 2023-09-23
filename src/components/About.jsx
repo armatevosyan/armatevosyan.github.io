@@ -42,7 +42,7 @@ function About(props) {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
-
+  console.log('data?.imageSource', data?.imageSource);
   return (
     <>
       <Header title={header} />
@@ -56,7 +56,7 @@ function About(props) {
                     {parseIntro(data.about)}
                   </Col>
                   <Col style={styles.introImageContainer}>
-                    <img src={data?.imageSource} alt="profile" />
+                    <img style={{ height: '100%', width: '70%' }} src="https://media.licdn.com/dms/image/D5603AQFckQ9qDGHGsg/profile-displayphoto-shrink_800_800/0/1686234434961?e=1700697600&v=beta&t=453pgF1iyNdztFDX9L-nNOt3w1RWpBagW4vpgzSJCU0" alt="profile" />
                   </Col>
                 </Row>
               </Fade>

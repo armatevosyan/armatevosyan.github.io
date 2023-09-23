@@ -1,19 +1,19 @@
 {
     "education":[
         {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
+            "title": "Sep 2015 - Jun 2021",
+            "cardTitle": "Yerevan State University, Computer Science, Informatics and applied mathematics",
+            "cardSubtitle":"Yerevan, Armenia",
+            "cardDetailedText": "Bachelors Degree",
             "icon" : {
-                "src": "images/education/lorem-ipsum.png"
+                "src": "images/education/YSU.png"
             }
         },
         {
-            "title": "Apr 20XX",
+            "title": "Apr 2015",
             "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
+            "cardSubtitle":"Astghadzor, Martuni, Gegharquniq",
+            "cardDetailedText": ""
         }
     ]
 }
