@@ -4,26 +4,37 @@ import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import { ThemeContext } from 'styled-components';
-import endpoints from '../constants/endpoints';
 import Header from './Header';
 import FallbackSpinner from './FallbackSpinner';
 import '../css/education.css';
 
+const data = {
+  education: [
+    {
+      title: 'Sep 2015 - Jun 2021',
+      cardTitle: 'Yerevan State University, Computer Science, Informatics and applied mathematics',
+      cardSubtitle: 'Yerevan, Armenia',
+      cardDetailedText: 'Bachelors Degree',
+      icon: {
+        src: 'images/education/YSU.png',
+      },
+    },
+    {
+      title: 'Apr 2015',
+      cardTitle: 'High School',
+      cardSubtitle: 'Astghadzor, Martuni, Gegharquniq',
+      cardDetailedText: '',
+    },
+  ],
+};
+
 function Education(props) {
   const theme = useContext(ThemeContext);
   const { header } = props;
-  const [data, setData] = useState(null);
   const [width, setWidth] = useState('50vw');
   const [mode, setMode] = useState('VERTICAL_ALTERNATING');
 
   useEffect(() => {
-    fetch(endpoints.education, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-
     if (window?.innerWidth < 576) {
       setMode('VERTICAL');
     }

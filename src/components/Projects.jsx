@@ -1,12 +1,86 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import endpoints from '../constants/endpoints';
 import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
+
+const data = {
+  projects: [
+    {
+      image: 'images/projects/rangeLanding.png',
+      title: 'Range Telecom',
+      bodyText: 'The famous telecommunication service of USA',
+      links: [
+        {
+          text: 'Live',
+          href: 'https://rangetelecom.com/',
+        },
+      ],
+      tags: [
+        'React',
+      ],
+    },
+    {
+      image: 'images/projects/range.png',
+      title: 'Range Telecom Admin',
+      bodyText: 'The admin site of Range telecom, which is controlling all services.',
+      links: [
+        {
+          text: 'Live',
+          href: 'https://ring.rangetelecom.com/',
+        },
+      ],
+      tags: [
+        'NodeJs',
+        'React',
+        'BootStrap',
+        'ExpressJs',
+        'Amazon',
+        'MongoDB',
+        'MySQL',
+      ],
+    },
+    {
+      image: 'images/projects/wrazzleLanding.png',
+      title: 'Wrazzle',
+      bodyText: 'Wrazzle is the famous ACP program service of USA. Also, works E-commerce.',
+      links: [
+        {
+          text: 'Live',
+          href: 'https://acp.wrazzle.com/',
+        },
+      ],
+      tags: [
+        'NodeJs',
+        'NextJs',
+        'Material UI',
+        'ExpressJs',
+        'MySQL',
+      ],
+    },
+    {
+      image: 'images/projects/wrazzle.png',
+      title: 'Wrazzle Admin',
+      bodyText: 'Wrazzle admin, which is controlling all services, including the E-commerce.',
+      links: [
+        {
+          text: 'Live',
+          href: 'https://acp.wrazzle.com/',
+        },
+      ],
+      tags: [
+        'NodeJs',
+        'React',
+        'Material UI',
+        'ExpressJs',
+        'MySQL',
+      ],
+    },
+  ],
+};
 
 const styles = {
   containerStyle: {
@@ -20,17 +94,8 @@ const styles = {
 const Projects = (props) => {
   const theme = useContext(ThemeContext);
   const { header } = props;
-  const [data, setData] = useState(null);
   const [showMore, setShowMore] = useState(false);
 
-  useEffect(() => {
-    fetch(endpoints.projects, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
   const numberOfItems = showMore && data ? data.length : 6;
   return (
     <>

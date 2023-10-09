@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { ThemeContext } from 'styled-components';
-import endpoints from '../constants/endpoints';
 
 const styles = {
   iconStyle: {
@@ -11,18 +10,25 @@ const styles = {
   },
 };
 
+const data = {
+  social: [
+    {
+      network: 'linkedin',
+      href: 'https://linkedin.com/in/armen-matevosyan-b269071b9',
+    },
+    {
+      network: 'github',
+      href: 'https://github.com/armatevosyan',
+    },
+    {
+      network: 'email',
+      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=matevosyan.2011@gmail.com&su=SUBJECT',
+    },
+  ],
+};
+
 function Social() {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(endpoints.social, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
 
   return (
     <div className="social">

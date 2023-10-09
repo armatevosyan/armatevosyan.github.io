@@ -1,10 +1,49 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled, { ThemeContext } from 'styled-components';
-import endpoints from '../constants/endpoints';
 import ThemeToggler from './ThemeToggler';
+
+const data = {
+  logo: {
+    source: 'images/logo.png',
+    height: 45,
+    width: 50,
+  },
+  sections: [
+    {
+      title: 'Home',
+      href: '/',
+    },
+    {
+      title: 'About',
+      href: '/about',
+    },
+    {
+      title: 'Skills',
+      href: '/skills',
+    },
+    {
+      title: 'Education',
+      href: '/education',
+    },
+    {
+      title: 'Experience',
+      href: '/experience',
+    },
+    {
+      title: 'Projects',
+      href: '/projects',
+    },
+    {
+      title: 'Resume',
+      href: 'https://drive.google.com/file/d/1d39rz2TzT-kiBAqfsGQwduM_p4Ei_yQv/view?usp=drive_link',
+      type: 'link',
+    },
+  ],
+
+};
 
 const styles = {
   logoStyle: {
@@ -38,17 +77,7 @@ const InternalNavLink = styled(NavLink)`
 
 const NavBar = () => {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(null);
   const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    fetch(endpoints.navbar, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
 
   return (
     <Navbar

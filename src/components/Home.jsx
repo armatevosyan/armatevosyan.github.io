@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal';
-import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
+
+const data = {
+  name: 'Armen Matevosyan',
+  roles: ['a Developer', 'a Software Engineer', 'a Freelancer'],
+};
 
 const styles = {
   nameStyle: {
@@ -22,17 +26,6 @@ const styles = {
 };
 
 function Home() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(endpoints.home, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
-
   return data ? (
     <Fade>
       <div style={styles.mainContainer}>

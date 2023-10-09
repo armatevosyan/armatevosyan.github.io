@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Container, Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import Header from './Header';
-import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
+
+const data = {
+  about: "Hi everyone, I am an experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Well-versed in technology and writing code to create systems that are reliable and user-friendly. Confident communicator, strategic thinker, and innovative creator to develop software that is customized to meet a company's organizational needs, highlight its core competencies, and further its success.",
+  imageSource: 'images/about/profile.png',
+};
 
 const styles = {
   introTextContainer: {
@@ -26,22 +30,12 @@ const styles = {
 
 function About(props) {
   const { header } = props;
-  const [data, setData] = useState(null);
 
   const parseIntro = (text) => (
     <ReactMarkdown
       children={text}
     />
   );
-
-  useEffect(() => {
-    fetch(endpoints.about, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
 
   return (
     <>

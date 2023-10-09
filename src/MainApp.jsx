@@ -1,29 +1,47 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import FallbackSpinner from './components/FallbackSpinner';
 import NavBarWithRouter from './components/NavBar';
-import endpoints from './constants/endpoints';
 import Home from './components/Home';
 
+const data = {
+  sections: [
+    {
+      component: 'About',
+      path: '/about',
+      headerTitle: 'About',
+    },
+    {
+      component: 'Skills',
+      path: '/skills',
+      headerTitle: 'Skills',
+    },
+    {
+      component: 'Education',
+      path: '/education',
+      headerTitle: 'Education',
+    },
+    {
+      component: 'Experience',
+      path: '/experience',
+      headerTitle: 'Experience',
+    },
+    {
+      component: 'Projects',
+      path: '/projects',
+      headerTitle: 'Projects',
+    },
+  ],
+};
+
 function MainApp() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(endpoints.routes, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
-
   return (
     <div className="MainApp">
       <NavBarWithRouter />
       <main className="main">
         <Switch>
           <Suspense fallback={<FallbackSpinner />}>
-            <Route exact path="/" component={Home} />
+            <Route exact path="https://armatevosyan.github.io/portfolio.github.io/" component={Home} />
             {data
               && data.sections.map((route) => {
                 const SectionComponent = React.lazy(() => import('./components/' + route.component));
