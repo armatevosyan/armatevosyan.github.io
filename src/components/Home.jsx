@@ -24,25 +24,23 @@ const styles = {
   },
 };
 
-function Home() {
-  return (
-    <Fade>
-      <div style={styles.mainContainer}>
-        <h1 style={styles.nameStyle}>{data?.name}</h1>
-        <div style={{ flexDirection: 'row' }}>
-          <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
-          <Typewriter
-            options={{
-              loop: true,
-              autoStart: true,
-              strings: data?.roles,
-            }}
-          />
-        </div>
-        <Social />
+const Home = () => (
+  <Fade>
+    <div style={styles.mainContainer}>
+      <h1 style={styles.nameStyle}>{data?.name}</h1>
+      <div style={{ flexDirection: 'row' }}>
+        <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
+        <Typewriter
+          options={{
+            loop: true,
+            autoStart: true,
+            strings: data?.roles,
+          }}
+        />
       </div>
-    </Fade>
-  );
-}
+      <Social />
+    </div>
+  </Fade>
+);
 
 export default Home;
