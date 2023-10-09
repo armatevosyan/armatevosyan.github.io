@@ -1,0 +1,22 @@
+{
+    "experiences": [
+        {
+            "title": "Software Engineer",
+            "subtitle": "We Construct LLC",
+            "workType": "Full time",
+            "workDescription": [
+                ""
+            ],
+            "dateText": "04/2021 – Present"
+        },
+        {
+            "title": "Web developer",
+            "subtitle": "IT Inovation LLC",
+            "workType": "Full time",
+            "workDescription": [
+                ""
+            ],
+            "dateText": "07/2019 – 12/2020"
+        }
+    ]
+}

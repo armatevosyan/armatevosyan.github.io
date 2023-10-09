@@ -1,0 +1,74 @@
+{
+    "projects" : [
+        {
+            "image" : "images/projects/rangeLanding.png",
+            "title": "Range Telecom",
+            "bodyText": "The famous telecommunication service of USA",
+            "links": [
+                {
+                    "text": "Live",
+                    "href": "https://rangetelecom.com/"
+                }
+            ],
+            "tags" : [
+                "React"
+            ]
+        },
+        {
+            "image" : "images/projects/range.png",
+            "title": "Range Telecom Admin",
+            "bodyText": "The admin site of Range telecom, which is controlling all services.",
+            "links": [
+                {
+                    "text": "Live",
+                    "href": "https://ring.rangetelecom.com/"
+                }
+            ],
+            "tags" : [
+                "NodeJs",
+                "React",
+                "BootStrap",
+                "ExpressJs",
+                "Amazon",
+                "MongoDB",
+                "MySQL"
+            ]
+        },
+        {
+            "image" : "images/projects/wrazzleLanding.png",
+            "title": "Wrazzle",
+            "bodyText": "Wrazzle is the famous ACP program service of USA. Also, works E-commerce.",
+            "links": [
+                {
+                    "text": "Live",
+                    "href": "https://acp.wrazzle.com/"
+                }
+            ],
+            "tags" : [
+                "NodeJs",
+                "NextJs",
+                "Material UI",
+                "ExpressJs",
+                "MySQL"
+            ]
+        },
+        {
+            "image" : "images/projects/wrazzle.png",
+            "title": "Wrazzle Admin",
+            "bodyText": "Wrazzle admin, which is controlling all services, including the E-commerce.",
+            "links": [
+                {
+                    "text": "Live",
+                    "href": "https://acp.wrazzle.com/"
+                }
+            ],
+            "tags" : [
+                "NodeJs",
+                "React",
+                "Material UI",
+                "ExpressJs",
+                "MySQL"
+            ]
+        }
+    ]
+}
