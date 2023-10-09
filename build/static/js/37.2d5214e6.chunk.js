@@ -1,0 +1,2 @@
+(this["webpackJsonpportfolio-app"]=this["webpackJsonpportfolio-app"]||[]).push([[37],{152:function(p,o,t){"use strict";t.r(o),o.default=t.p+"static/media/mongo.778a2dba.png"}}]);
+//# sourceMappingURL=37.2d5214e6.chunk.js.map

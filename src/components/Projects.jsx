@@ -7,10 +7,15 @@ import Header from './Header';
 import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
 
+import range from './images/projects/range.png';
+import rangeLanding from './images/projects/rangeLanding.png';
+import wrazzle from './images/projects/wrazzle.png';
+import wrazzleLanding from './images/projects/wrazzleLanding.png';
+
 const data = {
   projects: [
     {
-      image: 'images/projects/rangeLanding.png',
+      image: rangeLanding,
       title: 'Range Telecom',
       bodyText: 'The famous telecommunication service of USA',
       links: [
@@ -24,7 +29,7 @@ const data = {
       ],
     },
     {
-      image: 'images/projects/range.png',
+      image: range,
       title: 'Range Telecom Admin',
       bodyText: 'The admin site of Range telecom, which is controlling all services.',
       links: [
@@ -44,7 +49,7 @@ const data = {
       ],
     },
     {
-      image: 'images/projects/wrazzleLanding.png',
+      image: wrazzleLanding,
       title: 'Wrazzle',
       bodyText: 'Wrazzle is the famous ACP program service of USA. Also, works E-commerce.',
       links: [
@@ -62,7 +67,7 @@ const data = {
       ],
     },
     {
-      image: 'images/projects/wrazzle.png',
+      image: wrazzle,
       title: 'Wrazzle Admin',
       bodyText: 'Wrazzle admin, which is controlling all services, including the E-commerce.',
       links: [

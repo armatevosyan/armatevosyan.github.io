@@ -5,9 +5,11 @@ import { NavLink } from 'react-router-dom';
 import styled, { ThemeContext } from 'styled-components';
 import ThemeToggler from './ThemeToggler';
 
+import logo from './images/logo.png';
+
 const data = {
   logo: {
-    source: 'images/logo.png',
+    source: logo,
     height: 45,
     width: 50,
   },

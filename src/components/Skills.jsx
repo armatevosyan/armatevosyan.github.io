@@ -6,6 +6,19 @@ import { Container } from 'react-bootstrap';
 import Header from './Header';
 import FallbackSpinner from './FallbackSpinner';
 
+import postgre from './images/skills/postgre.png';
+
+import js from './images/skills/js.png';
+import nodejs from './images/skills/nodejs.png';
+import android from './images/skills/android_new.png';
+import mysql from './images/skills/mysql.png';
+import docker from './images/skills/docker.png';
+import git from './images/skills/git.png';
+import mongo from './images/skills/mongo.png';
+import native from './images/skills/native.png';
+import react from './images/skills/react.png';
+import redis from './images/skills/redis.png';
+
 const data = {
   intro: 'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with about 3 years:',
   skills: [{
@@ -13,23 +26,23 @@ const data = {
     title: 'Languages & Databases',
     items: [
       {
-        icon: 'images/skills/js.png',
+        icon: js,
         title: 'JavaScript',
       },
       {
-        icon: 'images/skills/postgre.png',
+        icon: postgre,
         title: 'PostgreSQL',
       },
       {
-        icon: 'images/skills/mysql.png',
+        icon: mysql,
         title: 'MySQL',
       },
       {
-        icon: 'images/skills/mongo.png',
+        icon: mongo,
         title: 'MongoDB',
       },
       {
-        icon: 'images/skills/redis.png',
+        icon: redis,
         title: 'Redis',
       },
     ],
@@ -38,15 +51,15 @@ const data = {
     title: 'Frameworks & Technologies',
     items: [
       {
-        icon: 'images/skills/native.png',
+        icon: native,
         title: 'ReactNative',
       },
       {
-        icon: 'images/skills/react.png',
+        icon: react,
         title: 'React',
       },
       {
-        icon: 'images/skills/nodejs.png',
+        icon: nodejs,
         title: 'Nodejs',
       },
     ],
@@ -55,15 +68,15 @@ const data = {
     title: 'Tools & Platforms',
     items: [
       {
-        icon: 'images/skills/android-studio.png',
+        icon: android,
         title: 'Android Studio',
       },
       {
-        icon: 'images/skills/git.png',
+        icon: git,
         title: 'Git',
       },
       {
-        icon: 'images/skills/docker.png',
+        icon: docker,
         title: 'Docker',
       },
     ],

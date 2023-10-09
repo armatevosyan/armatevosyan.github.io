@@ -41,20 +41,19 @@ function MainApp() {
       <main className="main">
         <Switch>
           <Suspense fallback={<FallbackSpinner />}>
-            <Route exact path="https://armatevosyan.github.io/portfolio.github.io/" component={Home} />
-            {data
-              && data.sections.map((route) => {
-                const SectionComponent = React.lazy(() => import('./components/' + route.component));
-                return (
-                  <Route
-                    key={route.headerTitle}
-                    path={route.path}
-                    component={() => (
-                      <SectionComponent header={route.headerTitle} />
-                    )}
-                  />
-                );
-              })}
+            <Route exact path="/" component={Home} />
+            {data.sections.map((route) => {
+              const SectionComponent = React.lazy(() => import('./components/' + route.component));
+              return (
+                <Route
+                  key={route.headerTitle}
+                  path={route.path}
+                  component={() => (
+                    <SectionComponent header={route.headerTitle} />
+                  )}
+                />
+              );
+            })}
           </Suspense>
         </Switch>
       </main>

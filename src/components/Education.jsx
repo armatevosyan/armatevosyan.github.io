@@ -8,6 +8,8 @@ import Header from './Header';
 import FallbackSpinner from './FallbackSpinner';
 import '../css/education.css';
 
+import image from './images/education/YSU.png';
+
 const data = {
   education: [
     {
@@ -16,7 +18,7 @@ const data = {
       cardSubtitle: 'Yerevan, Armenia',
       cardDetailedText: 'Bachelors Degree',
       icon: {
-        src: 'images/education/YSU.png',
+        src: image,
       },
     },
     {
@@ -73,7 +75,7 @@ function Education(props) {
                 }}
               >
                 <div className="chrono-icons">
-                  {data.education.map((education) => (education.icon ? (
+                  {data.education?.map((education) => (education.icon ? (
                     <img
                       key={education.icon.src}
                       src={education.icon.src}

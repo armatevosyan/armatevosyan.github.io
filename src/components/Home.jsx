@@ -2,7 +2,6 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal';
 import Social from './Social';
-import FallbackSpinner from './FallbackSpinner';
 
 const data = {
   name: 'Armen Matevosyan',
@@ -26,7 +25,7 @@ const styles = {
 };
 
 function Home() {
-  return data ? (
+  return (
     <Fade>
       <div style={styles.mainContainer}>
         <h1 style={styles.nameStyle}>{data?.name}</h1>
@@ -43,7 +42,7 @@ function Home() {
         <Social />
       </div>
     </Fade>
-  ) : <FallbackSpinner />;
+  );
 }
 
 export default Home;
