@@ -10,12 +10,10 @@ const styles = {
   },
 };
 
-function FallbackSpinner() {
-  return (
-    <div style={styles.spinnerContainerStyle}>
-      <Spinner animation="grow" />
-    </div>
-  );
-}
+const FallbackSpinner = () => (
+  <div style={styles.spinnerContainerStyle}>
+    <Spinner animation="grow" />
+  </div>
+);
 
 export default FallbackSpinner;
