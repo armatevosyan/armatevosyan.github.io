@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://armatevosyan.github.io/armatevosyan.github.io",
+  "homepage": "https://armatevosyan.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
