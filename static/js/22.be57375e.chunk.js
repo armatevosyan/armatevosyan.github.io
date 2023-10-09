@@ -1,0 +1,2 @@
+(this["webpackJsonpportfolio-app"]=this["webpackJsonpportfolio-app"]||[]).push([[22],{158:function(p,o,t){"use strict";t.r(o),o.default=t.p+"static/media/android-studio.554010a1.png"}}]);
+//# sourceMappingURL=22.be57375e.chunk.js.map
