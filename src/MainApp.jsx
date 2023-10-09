@@ -8,27 +8,27 @@ const data = {
   sections: [
     {
       component: 'About',
-      path: '/portfolio.github.io/about',
+      path: '/about',
       headerTitle: 'About',
     },
     {
       component: 'Skills',
-      path: '/portfolio.github.io/skills',
+      path: '/skills',
       headerTitle: 'Skills',
     },
     {
       component: 'Education',
-      path: '/portfolio.github.io/education',
+      path: '/education',
       headerTitle: 'Education',
     },
     {
       component: 'Experience',
-      path: '/portfolio.github.io/experience',
+      path: '/experience',
       headerTitle: 'Experience',
     },
     {
       component: 'Projects',
-      path: '/portfolio.github.io/projects',
+      path: '/projects',
       headerTitle: 'Projects',
     },
   ],
@@ -41,7 +41,7 @@ function MainApp() {
       <main className="main">
         <Switch>
           <Suspense fallback={<FallbackSpinner />}>
-            <Route exact path="/portfolio.github.io" component={Home} />
+            <Route exact path="/" component={Home} />
             {data.sections.map((route) => {
               const SectionComponent = React.lazy(() => import('./components/' + route.component));
               return (
