@@ -42,7 +42,7 @@ function About(props) {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
-  console.log('data?.imageSource', data?.imageSource);
+
   return (
     <>
       <Header title={header} />
