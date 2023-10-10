@@ -40,7 +40,7 @@ const data = {
     },
     {
       title: 'Resume',
-      href: 'https://drive.google.com/file/d/1d39rz2TzT-kiBAqfsGQwduM_p4Ei_yQv/view?usp=drive_link',
+      href: 'https://drive.google.com/file/d/1kLW8gUO9uz5SCJqlwyGv34zhFMLZ-iGM/view?usp=sharing',
       type: 'link',
     },
   ],
